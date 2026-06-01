@@ -111,6 +111,7 @@ wav = model.generate(
     text="VoxCPM2 is the current recommended release for realistic multilingual speech synthesis.",
     cfg_value=2.0,
     inference_timesteps=10,
+    seed=42,
 )
 sf.write("demo.wav", wav, model.tts_model.sample_rate)
 print("saved: demo.wav")
@@ -134,6 +135,7 @@ wav = model.generate(
     text="VoxCPM2 is the current recommended release for realistic multilingual speech synthesis.",
     cfg_value=2.0,
     inference_timesteps=10,
+    seed=42,
 )
 sf.write("demo.wav", wav, model.tts_model.sample_rate)
 ```
@@ -147,6 +149,7 @@ wav = model.generate(
     text="(A young woman, gentle and sweet voice)Hello, welcome to VoxCPM2!",
     cfg_value=2.0,
     inference_timesteps=10,
+    seed=42,
 )
 sf.write("voice_design.wav", wav, model.tts_model.sample_rate)
 ```
@@ -167,6 +170,7 @@ wav = model.generate(
     reference_wav_path="path/to/voice.wav",
     cfg_value=2.0,
     inference_timesteps=10,
+    seed=42,
 )
 sf.write("controllable_clone.wav", wav, model.tts_model.sample_rate)
 ```
@@ -213,6 +217,7 @@ voxcpm design \
 voxcpm design \
   --text "VoxCPM2 brings studio-quality multilingual speech synthesis." \
   --control "Young female voice, warm and gentle, slightly smiling" \
+  --seed 42 \
   --output out.wav
 
 # Voice cloning (reference audio)
