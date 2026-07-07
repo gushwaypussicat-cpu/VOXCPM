@@ -689,3 +689,4 @@ VoxCPM model weights and code are open-sourced under the [Apache-2.0](LICENSE) l
 ## ⭐ Star History
 
 [Star History Chart](https://star-history.com/#OpenBMB/VoxCPM&Date)# VOXCPM
+# VOXCPM
